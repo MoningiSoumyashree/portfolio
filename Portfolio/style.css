@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap');
+
+:root{
+    --dark_cyan:rgb(28, 126, 139);
+}
+
+*{
+    font-family: 'Itim', cursive;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+::selection{
+    background:var(--dark_cyan);
+    color:#333;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--dark_cyan);
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+    list-style: none;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.heading{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    color: #fff;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.heading span{
+    color: var(--dark_cyan);
+    text-transform: uppercase;
+}
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background: var(--dark_cyan);
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 1rem solid var(--dark_cyan);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+
+header .navbar{
+    width: 100%;
+}
+
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+li a{
+    display: block;
+    background: #222;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+li a:hover{
+    background: var(--dark_cyan);
+    letter-spacing: 1rem;
+}
+
+#menu{
+    position: fixed;
+    top: 2rem; right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1{
+    font-size:5rem;
+    color: #fff;
+}
+
+.home h1 span{
+    color: var(--dark_cyan);
+}
+
+.home p{
+    font-size:2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.about .row-1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.about .row-1 .content h3{
+    color:#fff;
+    font-size: 3.5rem;
+}
+.about .row-1 .content p{
+    color: #eee;
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+
+#skill-section{
+    width: 100%;
+    height: 100%;
+    padding: 80px 13%;
+}
+.header{
+    margin-bottom: 70px;
+    display: grid;
+    place-items: cemter;
+    text-align: center;
+}
+.header h2{
+    margin-bottom: -5px;
+    font-size: 5rem;
+    color: #fff;
+}
+.header h2 span{
+    color: var(--dark_cyan);
+}
+
+.header p{
+    font-size: 3.4rem;
+    padding: 2rem 0;
+    color: #fff;
+}
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-row-gap: 30px;
+    color: #fff;
+    font-size: 2rem;
+}
+.skill-main .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.skill-bar .info .percent{
+    font-weight: bold;
+}
+.skill-main .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-top: 25px;
+}
+.skill-main .skill-bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 25px;
+}
+.skill-bar .bar .html{
+    width: 90%;
+    animation: html 3s;
+    background-color: #ad2c2c;
+}
+
+@keyframes html{
+    0%{
+        width: 0;
+    }100%{
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .css{
+    width: 85%;
+    animation: css 3s;
+    background-color: #0d36dc;
+}
+
+@keyframes css{
+    0%{
+        width: 0;
+    }100%{
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .js{
+    width: 60%;
+    animation: js 3s;
+    background-color: #e717a2;
+}
+
+@keyframes js{
+    0%{
+        width: 0;
+    }100%{
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .java{
+    width: 60%;
+    animation: java 3s;
+    background-color: #e7e017;
+}
+
+@keyframes java{
+    0%{
+        width: 0;
+    }100%{
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .ui_design{
+    width: 75%;
+    animation: ui_design 3s;
+    background-color: #b315d6;
+}
+
+@keyframes ui_design{
+    0%{
+        width: 0;
+    }100%{
+        width: 90%;
+    }
+}
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 2.5rem;
+    background: #222;
+    color: #fff;
+    border-radius: 3rem;
+    padding: 2rem 2rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2.3rem;
+    color: #fff;
+    padding-top: 1.5rem;
+}
+.box p{
+    font-size: 1.7rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top: -1.5rem; left: -2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--dark_cyan);
+}
+
+.certificate .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.box1{
+    height: 20rem;
+    width: 30rem;
+    float: left;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.box1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box1:hover img{
+    transform: scale(1.2);
+}
+
+figcaption {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 2px;
+    text-align: center;
+  }
+
+.projects .box-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .box-container h1{
+    font-size: 2.5rem;
+    color: #eee;
+}
+.container{
+    height: 50%;
+    width: 50%;
+    float: left;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.container img{
+    height: 70%;
+    width: 70%;
+    object-fit: cover;
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container1 .contactinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container1 .contactinfo .box2{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.box2 h3{
+    font-size: 2.3rem;
+    color: var(--dark_cyan);
+    font-weight: 500;
+}
+.box2 p{
+    font-size: 1.7rem;
+    color: #fff;
+    padding-top: 1rem;
+}
+.box2 i{
+    position: absolute;
+    top: -1.5rem; left: -2.5rem;
+    height:4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--dark_cyan);
+}
+.box2 .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 2rem;
+    color: #fff;
+    flex-direction: column;
+    font-weight:300 ;
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #ddd;
+}
+.contactform h2{
+    font-size: 3rem;
+    color: #333;
+    font-weight: 300;
+}
+.inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.inputBox input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    font-size: 1.3rem;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.inputBox input:focus ~ span{
+    color: #e91e63;
+    font-size: 1.3rem;
+    transform: translateY(-20px)
+}
+.inputBox input:valid ~ span{
+    color: #e91e63;
+    font-size: 1.3rem;
+    transform: translateY(-20px)
+}
+.inputBox textarea:focus ~ span{
+    color: #e91e63;
+    font-size: 1.3rem;
+    transform: translateY(-20px)
+}
+.inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 1.3rem;
+    transform: translateY(-20px)
+}
+.inputBox input[type="submit"]{
+    width: 100px;
+    background: var(--dark_cyan);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 65%;
+    }
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px){
+  header{
+    left: 120%;
+  }
+  #menu{
+    display: block;
+}
+  header.toggle{
+    left: 0%;
+  }
+  body{
+    padding: 0%;
+  }
+}
+
+
+@media (max-width:768px){
+    header{
+     font-size: 50%;
+    }
+  
+  }
+@media (max-width:400px){
+    header{
+     width: 100vw;
+    }
+    .box{
+        width: 100%;
+    }
+    .box1{
+        width: 100%;
+    }
+  }
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    .container1 .contactinfo{
+        margin-bottom: 40px;
+    }
+    .container1 .contactinfo,
+    .contactform{
+        width: 100%;
+    }
+}
+
+ 
